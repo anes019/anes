@@ -1,3 +1,9 @@
+<?php 
+ include'header.php' 
+ ?>
+<?php  
+require '_header.php';
+?>
 <?PHP
 include "../core/crudsC.php";
 $catC=new categorieC();
@@ -70,10 +76,7 @@ $idc=0;
     <link rel="stylesheet" href="css/themify-icons2.css">
   </head>
   <body  id="produits">
-    <?php 
- include'header.php' 
- ?>
-
+ 
     <!-- END nav -->
       <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');">
       <div class="overlay"></div>
@@ -149,6 +152,8 @@ $idc=0;
 			<section class="ftco-section">
 	  	<div class="container-fluid">
 					<div class="row">
+
+
 						<?php
                                             foreach($listeproduit as $row){ 
                                             ?>
@@ -206,6 +211,13 @@ $idc=0;
 												<a href="produit_detail.php?id=<?php echo $row['id'];?>" class="social-info">
 													<img class="img-fluid" src="images/det.png" title="details" >											
 												</a>
+
+											  <a href="ajouterPanier.php?id=<?php echo $row['id']?>"
+											class="addPanier"
+										 class="social-info" >
+											<span class="ti-bag"></span>
+											<p class="hover-text" >ajouter au panier</p>
+										</a>
 									</div>
 
 								</div>
@@ -221,7 +233,7 @@ $idc=0;
 	
 
 
-
+				
    <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -239,7 +251,7 @@ $idc=0;
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  
+  <script type="text/javascript" src="app.js"> </script>
 
 
 <script type="text/javascript">

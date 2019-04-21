@@ -337,7 +337,7 @@ load_data();
     $('#result').hide();
      location.reload();
 
-}, 1000);   
+}, 100000);   
              
             }  
 
